@@ -2,7 +2,6 @@ package nl.familychefs.familychefs.security.domain;
 
 import java.util.Set;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
