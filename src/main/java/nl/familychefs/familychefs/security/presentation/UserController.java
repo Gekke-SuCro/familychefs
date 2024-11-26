@@ -19,13 +19,13 @@ public class UserController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String saveUsers() {
         return "Saved user";
     }
 
     @PutMapping
-    @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String updateUsers() {
         return "Updated user";
     }
