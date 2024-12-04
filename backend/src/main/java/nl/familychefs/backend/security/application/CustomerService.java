@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -24,8 +25,12 @@ public class CustomerService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Customer customer = customerRepository.findByUsername(username);
+        Optional<Customer> optionalCustomer = customerRepository.findByUsername(username);
+        if (optionalCustomer.isEmpty()) {
+            throw new UsernameNotFoundException("Customer not found");
+        }
 
+        Customer customer = optionalCustomer.get();
         Set<GrantedAuthority> authorities = customer.getRoles().stream()
                 .map((roles) -> new SimpleGrantedAuthority(roles.getName()))
                 .collect(Collectors.toSet());
