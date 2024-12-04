@@ -2,13 +2,11 @@ spring.application.name=backend
 
 # Datasource
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.url=jdbc:postgresql://<host>:<port>/<db>
+spring.datasource.username=
+spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=update
-
-spring.profiles.active=dev
 
 # Load initial data
 # spring.sql.init.mode=always
 # spring.jpa.defer-datasource-initialization=true
-
-
-
