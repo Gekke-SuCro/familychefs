@@ -34,4 +34,12 @@ public class Customer {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
     )
     private Set<Roles> roles;
+
+    public Set<Roles> getRoles() {
+        return roles;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
