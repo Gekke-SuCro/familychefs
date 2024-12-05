@@ -3,13 +3,13 @@ import {RecipeCard} from "../components/RecipeCard.jsx";
 import {RecipeAPI} from "../api/RecipeAPI.js";
 
 export const HomePage = () =>  {
-    const [recipes, setRecipes] = useState();
+    const [recipesData, setRecipesData] = useState([]);
 
     useEffect(() => {
         const fetchData = async function () {
             const data = await RecipeAPI.getAll();
             console.log(data);
-            setRecipes(data)
+            setRecipesData(data)
         }
 
         fetchData().then(r => {});
@@ -20,7 +20,11 @@ export const HomePage = () =>  {
             <h3>Recipes</h3>
             <section>
                 <div className="recipes">
-                    <RecipeCard />
+                    {recipesData.map((recipeData) => (
+                        <>
+                            <RecipeCard recipeData={recipeData} />
+                        </>
+                    ))}
                 </div>
             </section>
         </>

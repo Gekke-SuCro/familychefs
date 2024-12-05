@@ -1,10 +1,12 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-}
+@import "tailwindcss/base";
 
-body {
-  background: white;
-  color: black;
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    @apply bg-amber-50;
+    @apply text-black;
+  }
 }
