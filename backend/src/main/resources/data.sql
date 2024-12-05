@@ -1,3 +1,4 @@
+-- Insert users
 INSERT INTO customer VALUES
                          (1,
                           'admin@familychefs.com',
@@ -14,4 +15,9 @@ INSERT INTO roles VALUES (1,'ROLE_USER'),(2,'ROLE_ADMIN')
 ON CONFLICT DO NOTHING;
 
 INSERT INTO customer_roles VALUES (1,1),(2,2)
+ON CONFLICT DO NOTHING;
+
+-- Insert recipes
+INSERT INTO recipe VALUES
+                       (1, 'Heerlijke surinaamse nasy', 'Surinaamse Nasy')
 ON CONFLICT DO NOTHING;
