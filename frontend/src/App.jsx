@@ -11,7 +11,6 @@ function App() {
 
   return (
     <>
-        <p>App Layout</p>
         <Outlet />
     </>
   )
