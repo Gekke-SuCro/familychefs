@@ -1,17 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/images/react.svg'
-import viteLogo from '/vite.svg'
 import './assets/styles/App.css'
 import './views/HomePage'
-import {HomePage} from "./views/HomePage.jsx";
 import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+    return (
     <>
-        <Outlet />
+        <div className="h-screen flex flex-col">
+            <Navbar />
+            <div className="flex flex-1">
+                <main className="flex-1 overflow-y-auto">
+                    <Outlet />
+                </main>
+            </div>
+        </div>
     </>
   )
 }
