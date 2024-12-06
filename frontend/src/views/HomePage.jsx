@@ -1,37 +1,20 @@
 import React, {useEffect, useState} from 'react';
-import {RecipeCard} from "../components/RecipeCard.jsx";
-import {RecipeAPI} from "../api/RecipeAPI.js";
+import {RecipeCard} from "../components/RecipeCard";
+import {RecipeAPI} from "../api/RecipeAPI";
+import {dummyRecipes} from "../utils/DummyData";
 
 export const HomePage = () =>  {
     const [recipesData, setRecipesData] = useState([]);
 
     useEffect(() => {
-        // const fetchData = async function () {
-        //     const data = await RecipeAPI.getAll();
-        //     console.log(data);
-        //     setRecipesData(data)
-        // }
-        //
-        // fetchData().then(r => {});
+        const fetchData = async function () {
+            const data = await RecipeAPI.getAll();
+            console.log(data);
+            setRecipesData(data)
+        }
 
-        const dummyData = [
-            {
-                id: 1,
-                description: "Heerlijke surinaamse nasy",
-                title: "Surinaamse Nasy",
-            },
-            {
-                id: 2,
-                description: "Frisse tonijnsalade, alsof het vers uit de zee komt.\"\n",
-                title: "Frisse Tonijnsalade",
-            },
-            {
-                id: 3,
-                description: "Knapperige panini met gesmolten kaas, tonijnsalade, saus en rijk belegd met olijven, pepers en kappertjes.",
-                title: "Pittige Panini Tonijn",
-            },
-        ];
-        setRecipesData(dummyData);
+        // fetchData().then(r => {});
+        setRecipesData(dummyRecipes);
     }, []);
 
     return (
