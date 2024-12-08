@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import nl.familychefs.backend.cookbook.domain.Recipe;
+
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,11 +38,6 @@ public class Customer {
     )
     private Set<Roles> roles;
 
-    public Set<Roles> getRoles() {
-        return roles;
-    }
-
-    public String getPassword() {
-        return password;
-    }
+    @OneToMany(mappedBy = "customer")
+    private List<Recipe> recipes;
 }

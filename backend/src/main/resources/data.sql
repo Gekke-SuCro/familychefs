@@ -19,7 +19,19 @@ ON CONFLICT DO NOTHING;
 
 -- Insert recipes
 INSERT INTO recipe VALUES
-                       (1, 'Heerlijke surinaamse nasy', 'Surinaamse Nasy'),
-                       (2, 'Frisse tonijnsalade, alsof het vers uit de zee komt.', 'Frisse Tonijnsalade'),
-                       (3, 'Knapperige panini met gesmolten kaas, tonijnsalade, saus en rijk belegd met olijven, pepers en kappertjes.', 'Pittige Panini Tonijn')
+                       ( 320,
+                        2,
+                        1,
+                        'Heerlijke surinaamse nasy',
+                        'Surinaamse Nasy'),
+                       (20,
+                        1,
+                        2,
+                        'Frisse tonijnsalade, alsof het vers uit de zee komt.',
+                        'Frisse Tonijnsalade'),
+                       (35,
+                        1,
+                        3,
+                        'Knapperige panini met gesmolten kaas, tonijnsalade, saus en rijk belegd met olijven, pepers en kappertjes.',
+                        'Pittige Panini Tonijn')
 ON CONFLICT DO NOTHING;

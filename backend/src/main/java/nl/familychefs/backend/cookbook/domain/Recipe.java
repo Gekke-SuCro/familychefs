@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import nl.familychefs.backend.security.domain.Customer;
 
 @Entity
 @Data
@@ -21,4 +22,11 @@ public class Recipe {
 
     @Column(nullable = false)
     private String description;
+
+    @Column(nullable = false)
+    private int prepareTime;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
 }
