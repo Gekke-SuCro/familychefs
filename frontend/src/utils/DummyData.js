@@ -5,6 +5,8 @@ export const dummyRecipes = [
         title: "Surinaamse Nasy",
         prepareTime: 320,
         username: "John Doe",
+        difficulty: 3,
+        imgUrl: "https://ohmyfoodness.nl/wp-content/uploads/2015/06/surinaamse_nasi_recept-feat-500x500.jpg",
     },
     {
         id: 2,
@@ -12,6 +14,8 @@ export const dummyRecipes = [
         title: "Frisse Tonijnsalade",
         prepareTime: 320,
         username: "user000915288",
+        difficulty: 1,
+        imgUrl: "https://ohmyfoodness.nl/wp-content/uploads/2015/06/surinaamse_nasi_recept-feat-500x500.jpg",
     },
     {
         id: 3,
@@ -19,5 +23,16 @@ export const dummyRecipes = [
         title: "Pittige Panini Tonijn",
         prepareTime: 320,
         username: "user95828639",
+        difficulty: 2,
+        imgUrl: "https://eetse.nl/media/cache/og_image/uploads/images/zelfgemaakte-lasagne.jpg",
+    },
+    {
+        id: 4,
+        description: "Zelfgemaakte Lasagne",
+        title: "Lasagne",
+        prepareTime: 240,
+        username: "user95828639",
+        difficulty: 3,
+        imgUrl: "https://eetse.nl/media/cache/og_image/uploads/images/zelfgemaakte-lasagne.jpg",
     },
 ];
