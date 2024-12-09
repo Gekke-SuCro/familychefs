@@ -1,16 +1,13 @@
 package nl.familychefs.backend.cookbook.presentation.controller;
 
 import nl.familychefs.backend.cookbook.application.dto.RecipeResponse;
-import nl.familychefs.backend.cookbook.application.dto.RecipeService;
-import nl.familychefs.backend.cookbook.data.RecipeRepository;
-import nl.familychefs.backend.cookbook.domain.Recipe;
+import nl.familychefs.backend.cookbook.application.RecipeService;
 import nl.familychefs.backend.cookbook.domain.exception.RecipeNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
