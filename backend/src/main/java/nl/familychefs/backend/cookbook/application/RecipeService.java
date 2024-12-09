@@ -1,10 +1,10 @@
-package nl.familychefs.backend.cookbook.application.dto;
+package nl.familychefs.backend.cookbook.application;
 
 import lombok.Data;
+import nl.familychefs.backend.cookbook.application.dto.RecipeResponse;
 import nl.familychefs.backend.cookbook.data.RecipeRepository;
 import nl.familychefs.backend.cookbook.domain.Recipe;
 import nl.familychefs.backend.cookbook.domain.exception.RecipeNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

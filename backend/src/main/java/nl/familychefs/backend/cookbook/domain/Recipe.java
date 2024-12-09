@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import nl.familychefs.backend.security.domain.Customer;
 
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -29,4 +31,7 @@ public class Recipe {
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
+
+    @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<RecipeIngredient> ingredients;
 }

@@ -18,7 +18,4 @@ public class Ingredient {
 
     @Column(nullable = false)
     private String name;
-
-    @Enumerated(EnumType.STRING)
-    private MeasureUnit measureUnit;
 }
